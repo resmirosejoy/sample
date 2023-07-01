@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+{% block content %}
+
+<center>
+    <h3 class="alert alert-success text-center mt-3 w-50">
+        STUDENT TABLE
+    </h3>
+    <table class="table table-dark table-hover text-center  mb-5 w-50">
+        <thead>
+            <tr>
+                <th>STUDENT NAME</th>
+                <th>STUDENT ADDRESS</th>
+                <th>STUDENT AGE</th>
+                <th>JOINING DATE</th>               
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in sdata %}
+            <tr>
+                <td>{{ p.Std_Name}}</td>
+                <td>{{ p.Std_Address}}</td>
+                <td>{{ p.Std_Age}}</td>
+                <td>{{ p.Join_Date }}</td>  
+            </tr>
+            {% endfor %}
+        </tbody> 
+    </table>
+
+
+    <h3 class="alert alert-success text-center mt-4 w-50">
+        COURSE TABLE
+    </h3>
+    <table class="table table-dark table-hover text-center mt-3 w-50">
+        <thead>
+            <tr>
+                <th>COURSE NAME</th>
+                <th>COURSE FEES</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for p in cdata %}
+            <tr>
+                <td>{{ p.Course_Name }}</td>  
+                <td>{{ p.Course_Fees }}</td>  
+            </tr>
+            {% endfor %}
+        </tbody> 
+    </table>
+
+</center>
+{% endblock %}

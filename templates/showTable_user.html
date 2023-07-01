@@ -1,0 +1,79 @@
+{% extends 'mainUser.html' %}
+{% block content %}
+<html lang="en">
+    <head>
+        <title>
+            Image
+        </title>
+        {% load static %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+        <body>
+            <div class="container mt-5">
+                <h1 class="alert alert-dark text-center">
+                    SHOW TEACHER DETAILS
+                </h1>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-10">
+                        <table class="table text-center ">
+                            <thead>
+                                <tr>
+                                    <!--<th>ID</th>-->
+                                    <th scope="col">FIRST NAME</th>
+                                    <th scope="col">LAST NAME</th>
+                                    <th scope="col">EMAIL ID</th>
+                                    <th scope="col">PHONE</th>
+                                    <th scope="col">ADDRESS</th>
+                                    <th scope="col">GENDER</th>
+                                    <th scope="col">AGE</th>
+                                    <th scope="col">COURSE</th>
+                                    <th scope="col">PHOTO</th>
+                                    <th scope="col">ACTION..</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <!--<td>{{ p.id }}</td>-->
+                                    <td class="pt-4">{{ product.teacher.first_name }}</td>
+                                    <td class="pt-4">{{ product.teacher.last_name }}</td>
+                                    <td class="pt-4">{{ product.teacher.email }}</td>
+                                    <td class="pt-4">{{ product.phone_number }}</td>
+                                    <td class="pt-4">{{ product.address }}</td>
+                                    <td class="pt-4">{{ product.gender }}</td>
+                                    <td class="pt-4">{{ product.age }}</td>
+                                    <td class="pt-4">{{ product.Course.Course_Name }}</td> 
+                                    <td>
+                                        {{ product.image }}<br>
+                                        <img src="{{ product.image.url }}" class="w-25">
+                                    </td>
+                    
+                                    <td>
+                                        <a  href="{% url 'editpage' product.id %}">Edit</a>  
+                                        <br>
+                                        <a  href="delete_student/{{ product.id }}">Delete</a>  
+                                    </td>
+                                </tr>
+                                               
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+        </body>
+        </html>
+        {% endblock %}

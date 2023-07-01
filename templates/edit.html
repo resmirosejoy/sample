@@ -1,0 +1,72 @@
+
+<!--<html lang="en">
+    <head>
+        <title>
+            Image
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"> 
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <!-- Bootstrap CSS                              ->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+        <body>
+            <div class="container mt-5">
+                <h1 class="alert alert-info text-center">
+                    ADD STUDENT DETAILS
+                </h1>
+                <div class="row">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-6">
+                        <form method="post" action="/edit_student_details/{{ products.id }}" enctype="multipart/form-data">
+                            {% csrf_token %}
+                    <!--/edit_student_details/{{ products.id }}                            ->
+                          
+                            <label>Enter First Name:</label><br>
+                            <input type="text" name="first_name" value="{{ products.teacher.first_name }}"><br>
+                            <label>Enter Last Name:</label><br>
+                            <input type="text" name="last_name" value="{{ products.teacher.last_name }}"><br>
+                            <label>Email Id:</label><br>
+                            <input type="text" name="email" value="{{ products.teacher.email }}"><br>
+                            <label>Phone Number:</label><br>
+                            <input type="number" name="phone_number" value="{{ products.phone_number }}"><br>
+                            <label>Enter Your Address:</label><br>
+                            <input type="text" name="address" value="{{ products.address }}"><br>
+                    
+                            <label>Gender:</label><br>
+                            <input type="radio" name="gender" value="{{ products.male }}"> Male
+                            <input type="radio" name="gender" value="{{ products.female }}"> Female
+                            <label>Enter Your Age:</label><br>
+                            <input type="text" name="age" value="{{ products.age }}"><br>
+                            <label>Course:</label><br>
+                            <!--<input type="text" name="course" value="{{ products.course }}"><br>                      ->
+
+                            <select class="form-control" name="select" id="qwerty">
+                                {% for i in courses %}
+                                <option value="{{ i.id }}">{{ i.Course.Course_Name }}</option>
+                                {% endfor %}
+                                </select>
+                            <br>
+                            <label>Product Image :</label>
+                            <img src="{{ products.image.url }}" class="w-25"><br>
+                            <input type="file" name="file" class="form-control mt-3" accept="image/*" value="{{ products.image }}" >
+                    
+                            <button type="submit">Update</button>
+                            
+                            <input type=button value="Previous Page" onClick="javascript:history.go(-1);">
+                        </form>
+                    </div>
+                    <div class="col-sm-3"></div>
+                </div>
+            </div>
+        </body>
+        </html>-->
+       
